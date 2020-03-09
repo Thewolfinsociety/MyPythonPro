@@ -55,7 +55,6 @@ import tornado.options
 import time
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        time.sleep(5)
         self.write("Hello, world")
 
 

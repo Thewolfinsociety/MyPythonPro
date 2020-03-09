@@ -130,7 +130,7 @@ class asynchronous_fetcher_4(tornado.web.RequestHandler):
         task_list = [sleep() for i in range(3)]
         task_list.append(asynchronous_fetch(url))
         body = await asyncio.wait(task_list)  # 将所有异步操作的结果返回,但是是无序的,要是需要返回结果的话解析起来比较麻烦
-        print("end request:", body)
+        #print("end request:", body)
         # print(type(body), len(body),type(body[0]),len(body[0]),type(body[0]))
         self.write("%s,%s" % ([x.result() for x in body[0] if x.result() is not None][0],
                               self.request.request_time()))
