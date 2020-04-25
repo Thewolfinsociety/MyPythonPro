@@ -5,7 +5,7 @@
 # @Author : litao
 
 # @File : Sumoftwo.py
-
+# LetCode 俩数之和
 def sum(num, targt):
     hash = {}
     for i in range(0, len(num)):
